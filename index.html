@@ -1,332 +1,638 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Web-Based Guidance Management System</title>
+<head>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="./assets/css/pages/landing.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body>
-    <!-- =========================
-         NAVIGATION BAR
-    ========================== -->
-    <header class="navbar bg-secondary">
-      <a href="#home" class="logo">
-        <img
-          class="d-inline-flex flex-column items-center h-25 w-25 gap-10"
-          src="./assets/images/logo/britech-logo.png"
-          alt="Britech Logo"
-        />
-      </a>
+    <title>Guidance Management System</title>
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#features">FEATURES</a></li>
-          <li><a href="#how-it-works">HOW IT WORKS</a></li>
-          <li><a href="#contact" class="nav-cta">[CTA]</a></li>
-        </ul>
-      </nav>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+
+<body class="bg-light">
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header
+        class="d-flex flex-row justify-between items-center px-8 py-4 bg-white shadow-sm position-sticky top-0 z-50">
+
+        <!-- LOGO --> 
+
+        <div class="d-flex flex-row items-center gap-0 text-x1  font-bold text-dark">
+          <a href="#home"> 
+
+            <img class="h-25 w-25" src="./assets/images/logo/britech-logo.png" alt="Britech College">
+          
+          </a>
+          
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="d-flex items-center gap-8">
+
+            <a href="#home" class="text-dark">
+                Home
+            </a>
+
+            <a href="#about" class="text-dark">
+                About
+            </a>
+
+            <a href="#features" class="text-dark">
+                Features
+            </a>
+
+            <a href="#how-it-works" class="text-dark">
+                How It Works
+            </a>
+
+            <a href="#contact" class="text-dark">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- BUTTON -->
+
+        <a
+            href="./auth/sign-in.html"
+            class="bg-primary text-white px-6 py-3 rounded-lg font-semibold">
+
+            LOG IN
+
+        </a>
+
     </header>
 
-    <!-- =========================
-         SECTION 1 — HOME
-    ========================== -->
-    <section id="home" class="hero hero-landing">
-      <span class="section-label">Section 1</span>
 
-      <div class="hero-content text-light">
-        <h1 class="text-56">Web-Based Guidance Management System</h1>
 
-        <h2>For Record and Report Generation at Britech College</h2>
+    <!-- ================= HERO ================= -->
 
-        <p>A web-based system designed to generate easy, quick, and safe reports at Britech.</p>
+    <main id="home">
 
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-dark"> Get Started! </a>
+        <section
+            class="d-flex items-center justify-center text-center bg-white p-20">
 
-          <a href="#features" class="btn btn-light"> Learn More </a>
+            <div class="w-75">
+
+                <p class="text-sm font-semibold text-primary mb-4">
+                    WEB-BASED GUIDANCE MANAGEMENT SYSTEM
+                </p>
+
+
+                <h1 class="text-5xl font-bold text-dark mb-6">
+
+                    Simple, Fast &
+                    <span class="text-primary">
+                        Secure
+                    </span>
+                    Guidance Services
+
+                </h1>
+
+
+                <p class="text-lg text-gray mx-auto">
+
+                    A web-based system designed to provide
+                    easy, quick, and safe access to guidance
+                    services and student records at Britech College.
+
+                </p>
+
+
+                <!-- HERO BUTTONS -->
+
+                <div
+                    class="d-flex items-center justify-center gap-4 mt-8">
+
+                    <a
+                        href="#get-started"
+                        class="bg-primary text-white px-8 py-4 rounded-lg font-semibold shadow">
+
+                        Get Started
+
+                    </a>
+
+
+                    <a
+                        href="#about"
+                        class="border border-primary text-primary px-8 py-4 rounded-lg font-semibold">
+
+                        Learn More
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= WHY DOES THIS MATTER ================= -->
+
+        <section
+            id="about"
+            class="bg-light px-8 py-20">
+
+            <div class="text-center mb-12">
+
+                <h2 class="text-4xl font-bold text-dark mb-4">
+
+                    Why Does This Matter?
+
+                </h2>
+
+                <p class="text-md text-gray">
+
+                    The Guidance Office in Britech College
+                    struggles with these three factors.
+
+                </p>
+
+            </div>
+
+
+            <!-- PROBLEMS -->
+
+            <div
+                class="d-flex gap-6 justify-center">
+
+
+                <!-- PROBLEM 1 -->
+
+                <div
+                    class="bg-white p-8 rounded-xl shadow-md w-33">
+
+                    <p class="text-sm font-bold text-secondary mb-4">
+                        PROBLEM 01
+                    </p>
+
+                    <h3 class="text-xl font-bold mb-4">
+                        Poor Record Organization
+                    </h3>
+
+                    <p class="text-gray">
+                        Manual records can be difficult
+                        to organize and access.
+                    </p>
+
+                </div>
+
+
+                <!-- PROBLEM 2 -->
+
+                <div
+                    class="bg-white p-8 rounded-xl shadow-md w-33">
+
+                    <p class="text-sm font-bold text-secondary mb-4">
+                        PROBLEM 02
+                    </p>
+
+                    <h3 class="text-xl font-bold mb-4">
+                        Lack of Reports
+                    </h3>
+
+                    <p class="text-gray">
+                        Creating and managing reports
+                        can take more time.
+                    </p>
+
+                </div>
+
+
+                <!-- PROBLEM 3 -->
+
+                <div
+                    class="bg-white p-8 rounded-xl shadow-md w-33">
+
+                    <p class="text-sm font-bold text-secondary mb-4">
+                        PROBLEM 03
+                    </p>
+
+                    <h3 class="text-xl font-bold mb-4">
+                        Difficulty in Ensuring Timely Processes
+                    </h3>
+
+                    <p class="text-gray">
+                        Manual processes can make
+                        guidance services slower.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section
+            id="features"
+            class="bg-white px-8 py-20">
+
+            <div class="text-center mb-12">
+
+                <h2 class="text-4xl font-bold text-dark mb-4">
+
+                    What Can We Offer?
+
+                </h2>
+
+                <p class="text-md text-gray">
+
+                    A better way to manage guidance
+                    services and student records.
+
+                </p>
+
+            </div>
+
+
+            <div
+                class="d-flex flex-wrap justify-center gap-6">
+
+
+                <!-- FAST -->
+
+                <div
+                    class="bg-light p-8 rounded-xl shadow-sm w-33">
+
+                    <div
+                        class="bg-primary text-white rounded-lg p-3 w-fit mb-5">
+
+                        ⚡
+
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Fast & Efficient
+                    </h3>
+
+                    <p class="text-gray">
+                        Timely processes are faster
+                        and more convenient.
+                    </p>
+
+                </div>
+
+
+                <!-- SECURE -->
+
+                <div
+                    class="bg-light p-8 rounded-xl shadow-sm w-33">
+
+                    <div
+                        class="bg-primary text-white rounded-lg p-3 w-fit mb-5">
+
+                        🔒
+
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Safe & Secure
+                    </h3>
+
+                    <p class="text-gray">
+                        Student records are kept
+                        safe and secure.
+                    </p>
+
+                </div>
+
+
+                <!-- ORGANIZED -->
+
+                <div
+                    class="bg-light p-8 rounded-xl shadow-sm w-33">
+
+                    <div
+                        class="bg-primary text-white rounded-lg p-3 w-fit mb-5">
+
+                        📁
+
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Organized
+                    </h3>
+
+                    <p class="text-gray">
+                        Records are organized,
+                        accessible, and easy to manage.
+                    </p>
+
+                </div>
+
+
+                <!-- CONVENIENT -->
+
+                <div
+                    class="bg-light p-8 rounded-xl shadow-sm w-33">
+
+                    <div
+                        class="bg-primary text-white rounded-lg p-3 w-fit mb-5">
+
+                        ✓
+
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Convenient
+                    </h3>
+
+                    <p class="text-gray">
+                        Makes guidance services
+                        simple and convenient.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section
+            id="how-it-works"
+            class="bg-light px-8 py-20">
+
+            <div class="text-center mb-12">
+
+                <h2 class="text-4xl font-bold text-dark mb-4">
+                    How It Works
+                </h2>
+
+                <p class="text-md text-gray">
+                    Simple. Fast. Easy.
+                </p>
+
+            </div>
+
+
+            <div
+                class="d-flex justify-center gap-12">
+
+
+                <!-- STEP 1 -->
+
+                <div class="text-center w-33">
+
+                    <div
+                        class="bg-primary text-white rounded-full p-4 mx-auto mb-5 font-bold text-xl">
+
+                        1
+
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Log In / Sign Up
+                    </h3>
+
+                    <p class="text-gray">
+                        Log in or create an account
+                        to access the system.
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 2 -->
+
+                <div class="text-center w-33">
+
+                    <div
+                        class="bg-primary text-white rounded-full p-4 mx-auto mb-5 font-bold text-xl">
+
+                        2
+
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Check-In and Report
+                    </h3>
+
+                    <p class="text-gray">
+                        Check your schedule and
+                        submit your report.
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 3 -->
+
+                <div class="text-center w-33">
+
+                    <div
+                        class="bg-primary text-white rounded-full p-4 mx-auto mb-5 font-bold text-xl">
+
+                        3
+
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Collect / Store
+                    </h3>
+
+                    <p class="text-gray">
+                        Obtain reports and securely
+                        store the information.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GET STARTED ================= -->
+
+        <section
+            id="get-started"
+            class="bg-white text-center px-8 py-20">
+
+            <h2 class="text-4xl font-bold text-dark mb-4">
+
+                Ready to Get Started?
+
+            </h2>
+
+            <p class="text-md text-gray mb-8">
+
+                Experience a simple and convenient
+                guidance management system.
+
+            </p>
+
+
+            <a
+                href="#home"
+                class="bg-primary text-white px-8 py-4 rounded-lg font-semibold">
+
+                Get Started
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer
+        id="contact"
+        class="bg-dark text-white px-8 py-12">
+
+        <div
+            class="d-flex justify-between gap-12">
+
+
+            <!-- BRAND -->
+
+            <div class="w-33">
+
+                <h3 class="text-xl font-bold text-white mb-4">
+                    Guidance
+                </h3>
+
+                <p class="text-light-gray">
+
+                    A Web-Based Guidance Counseling
+                    System designed for simple,
+                    fast, and secure services.
+
+                </p>
+
+            </div>
+
+
+            <!-- PRODUCT -->
+
+            <div>
+
+                <h3 class="font-bold text-white mb-4">
+                    Product
+                </h3>
+
+              <a href="#features">
+
+                <p class="text-light-gray mb-2">
+                    Features
+                </p>
+
+              </a>
+
+
+                <p class="text-light-gray">
+                    Documentation
+                </p>
+
+            </div>
+
+
+            <!-- COMPANY -->
+
+            <div>
+
+                <h3 class="font-bold text-white mb-4">
+                    Company
+                </h3>
+
+                <p class="text-light-gray mb-2">
+                    About
+                </p>
+
+                <p class="text-light-gray mb-2">
+                    Contacts
+                </p>
+
+                <p class="text-light-gray">
+                    Careers
+                </p>
+
+            </div>
+
+
+            <!-- SUPPORT -->
+
+            <div>
+
+                <h3 class="font-bold text-white mb-4">
+                    Support
+                </h3>
+
+                <p class="text-light-gray mb-2">
+                    Help Center
+                </p>
+
+                <p class="text-light-gray mb-2">
+                    FAQ
+                </p>
+
+                <p class="text-light-gray">
+                    Contact
+                </p>
+
+            </div>
+
+
+            <!-- SOCIALS -->
+
+            <div>
+
+                <h3 class="font-bold text-white mb-4">
+                    Socials
+                </h3>
+
+                <p class="text-light-gray mb-2">
+                    Facebook
+                </p>
+
+                <p class="text-light-gray mb-2">
+                    Instagram
+                </p>
+
+                <p class="text-light-gray">
+                    LinkedIn
+                </p>
+
+            </div>
+
         </div>
-      </div>
-    </section>
 
-    <!-- =========================
-         SECTION 2 — ABOUT
-    ========================== -->
-    <section id="about" class="about b bg-gray">
-      <span class="section-label">Section 2</span>
 
-      <h2 class="section-title">"Why does this matter?"</h2>
+        <div
+            class="border-t border-gray mt-12 pt-6 text-center">
 
-      <p class="section-description">The Guidance Office in Britech College struggles with these three factors:</p>
+            <p class="text-light-gray text-sm">
 
-      <div class="problems">
-        <div class="problem-card">
-          <span class="problem-number"> Problem 1: </span>
+                © 2026 Guidance Web-Based Guide.
+                All Rights Reserved.
 
-          <h3>Poor Record Organization</h3>
+            </p>
 
-          <p>Records can become difficult to organize, locate, and manage efficiently.</p>
         </div>
 
-        <div class="problem-card">
-          <span class="problem-number"> Problem 2: </span>
-
-          <h3>Lack of Reports</h3>
-
-          <p>Manual processes can make report preparation more difficult.</p>
-        </div>
-
-        <div class="problem-card">
-          <span class="problem-number"> Problem 3: </span>
-
-          <h3>Difficulty in Ensuring Timely Processes</h3>
-
-          <p>Delays can affect workflow and timely completion of guidance tasks.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================
-         SECTION 3 — FEATURES
-    ========================== -->
-    <section id="features" class="features">
-      <span class="section-label">Section 3</span>
-
-      <h2 class="section-title">"What can we offer?"</h2>
-
-      <div class="features-grid">
-        <!-- FEATURE 1 -->
-        <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-
-          <div>
-            <h3>Fast &amp; Efficient</h3>
-
-            <p>Timely processes are faster and more convenient.</p>
-          </div>
-        </div>
-
-        <!-- FEATURE 2 -->
-        <div class="feature-card">
-          <div class="feature-icon">▤</div>
-
-          <div>
-            <h3>Organized</h3>
-
-            <p>Access information in an organized and clear format for easy placement.</p>
-          </div>
-        </div>
-
-        <!-- FEATURE 3 -->
-        <div class="feature-card">
-          <div class="feature-icon">♢</div>
-
-          <div>
-            Secure
-            <h3></h3>
-
-            <p>Ensures the records are safe and secure.</p>
-          </div>
-        </div>
-
-        <!-- FEATURE 4 -->
-        <div class="feature-card">
-          <div class="feature-icon">♡</div>
-
-          <div>
-            <h3>Convenient</h3>
-
-            <p>Makes the process more convenient and user-friendly.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================
-         SECTION 4 — HOW IT WORKS
-    ========================== -->
-    <section id="how-it-works" class="how-it-works">
-      <span class="section-label">Section 4</span>
-
-      <h2 class="section-title">How It Works</h2>
-
-      <h3 class="simple-title">Simple. Fast. Easy.</h3>
-
-      <div class="steps">
-        <!-- STEP 1 -->
-        <div class="step">
-          <div class="step-box">
-            <span class="step-number"> {1} </span>
-
-            <span class="step-icon"> 👤 </span>
-
-            <strong> Log in / Sign up </strong>
-          </div>
-
-          <h3>Log in or sign up</h3>
-
-          <p>Create an account or log in to access the system.</p>
-        </div>
-
-        <!-- ARROW -->
-        <div class="arrow">→</div>
-
-        <!-- STEP 2 -->
-        <div class="step">
-          <div class="step-box">
-            <span class="step-number"> {2} </span>
-
-            <span class="step-icon"> ▣ </span>
-
-            <strong> Track and Report </strong>
-          </div>
-
-          <h3>Track and Report</h3>
-
-          <p>Start your schedule and manage your reports.</p>
-        </div>
-
-        <!-- ARROW -->
-        <div class="arrow">→</div>
-
-        <!-- STEP 3 -->
-        <div class="step">
-          <div class="step-box">
-            <span class="step-number"> {3} </span>
-
-            <span class="step-icon"> ▤ </span>
-
-            <strong> Collect &amp; Store </strong>
-          </div>
-
-          <h3>Collect &amp; Store</h3>
-
-          <p>Obtain reports, sort and store information.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================
-         SECTION 5 — TESTIMONIAL
-    ========================== -->
-    <section id="contact" class="contact">
-      <span class="section-label">Section 5</span>
-
-      <h2 class="section-title">"Trusted by our users."</h2>
-
-      <div class="testimonial">
-        <p class="testimonial-text">"Very fast, Very secure, Very reliable."</p>
-
-        <p class="testimonial-author">— Guidance Counselor</p>
-      </div>
-
-      <p class="ready">Ready to get started?</p>
-
-      <a href="#home" class="btn btn-dark"> Get Started </a>
-    </section>
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-    <footer>
-      <div class="footer-top">
-        <!-- BRAND -->
-        <div class="footer-brand">
-          <h3>A Web-Based Guidance Counseling System</h3>
-
-          <p>A web-based system designed to improve guidance record management and report generation.</p>
-        </div>
-
-        <!-- PRODUCT -->
-        <div class="footer-column">
-          <h4>Product</h4>
-
-          <ul>
-            <li>
-              <a href="#features"> Features </a>
-            </li>
-
-            <li>
-              <a href="#"> Pricing </a>
-            </li>
-
-            <li>
-              <a href="#"> Documentation </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- COMPANY -->
-        <div class="footer-column">
-          <h4>Company</h4>
-
-          <ul>
-            <li>
-              <a href="#about"> About </a>
-            </li>
-
-            <li>
-              <a href="#contact"> Contacts </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- SUPPORT -->
-        <div class="footer-column">
-          <h4>Support</h4>
-
-          <ul>
-            <li>
-              <a href="#"> Help Center </a>
-            </li>
-
-            <li>
-              <a href="#"> FAQ </a>
-            </li>
-
-            <li>
-              <a href="#contact"> Contact </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- SOCIALS -->
-        <div class="footer-column">
-          <h4>Socials</h4>
-
-          <ul>
-            <li>
-              <a href="#"> Facebook </a>
-            </li>
-
-            <li>
-              <a href="#"> Instagram </a>
-            </li>
-
-            <li>
-              <a href="#"> LinkedIn </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- FOOTER BOTTOM -->
-      <div class="footer-bottom">
-        <p>© 2026 Web-Based Guidance</p>
-
-        <div class="legal-links">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">Sitemap</a>
-        </div>
-      </div>
     </footer>
-  </body>
+
+
+</body>
 </html>
