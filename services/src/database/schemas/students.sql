@@ -18,4 +18,4 @@ CREATE TABLE students (
     CONSTRAINT fk_students_grade_section FOREIGN KEY (grade_section_id) REFERENCES grade_sections(id),
     CONSTRAINT fk_students_account FOREIGN KEY (account_id) REFERENCES accounts(id)
     
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci; 
