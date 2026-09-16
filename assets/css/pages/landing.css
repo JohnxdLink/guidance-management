@@ -1,0 +1,5 @@
+@import url("../component/buttons/base.css");
+
+.btn-get-started {
+  color: var(--color-white);
+}

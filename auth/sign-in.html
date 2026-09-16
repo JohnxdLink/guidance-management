@@ -1,200 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guidance | Sign-in</title>
 
-    <title>Log In | Britech College</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/pages/sign-in.css" />
+  </head>
 
-    <link rel="stylesheet" href="../assets/css/style.css">
+  <body class="d-flex flex-row h-screen bg-light">
+    <div class="p-10 d-flex flex-column flex-1 right-container">
+      <header class="d-flex items-center gap-2">
+        <img class="w-96 h-auto" src="../assets/images/logo/britech-logo.png" alt="Britech College" />
+        <div class="d-flex flex-column gap-1 text-white">
+          <h1>Britech College</h1>
+          <p>White Rose, Yati, Liloan, Cebu, 6000</p>
+        </div>
+      </header>
 
-</head>
+      <section class="mt-12 d-flex flex-column text-white">
+        <p class="text-lg font-semibold">WEB-BASED GUIDANCE MANAGEMENT SYSTEM</p>
 
+        <h1 class="mt-5 text-5xl font-bold mb-6">
+          Simple, Fast &
+          <span class=""> Secure </span>
+          Guidance Services
+        </h1>
 
-<body class="bg-light">
+        <p class="text-lg">
+          A web-based system designed to provide easy, quick, and safe access to guidance services and student records
+          at Britech College.
+        </p>
+      </section>
+    </div>
 
-
-    <!--  LOGIN PAGE  -->
-
-    <main
-        class="d-flex items-center justify-center position-relative h-100 p-8">
-
-
-        <!-- Decorative Background -->
-
-        <div
-            class="position-absolute top-0 right-0 bg-warning radius-full">
+    <div class="d-flex flex-column flex-1 items-center justify-center">
+      <form class="w-75">
+        <a class="mb-2 btn-tertiary" href="../index.html"><i class="mr-1 fa-solid fa-arrow-left-long"></i>Return</a>
+        <h1 class="mb-6 text-32">Welcome Back! 👋</h1>
+        <!-- Username -->
+        <div class="mb-6">
+          <label for="username" class="label"><span class="mr-2 fa-solid fa-user"></span>Username</label>
+          <input class="mt-2 input" type="text" id="username" name="username" placeholder="Enter your username" />
         </div>
 
-
-        <!--  LOGIN CARD  -->
-
-        <section
-            class="bg-white radius-2xl shadow-xl p-12 w-50 position-relative">
-
-
-            <!--  LOGO  -->
-
-            <div
-                class="d-flex flex-column items-center justify-center mb-12">
-
-                <!-- Britech Logo Circle -->
-
-                <div
-                    class="d-flex items-center justify-center w-30 h-30">
-                    <a href="../index.html">
-
-                        <img
-                         src="../assets/images/logo/britech-logo.png" alt="Britech College">
-                        
-                    </a>
-                </div>
-
-
-                <h1
-                    class="text-3xl font-bold text-primary mt-4">
-
-                    Britech
-
-                </h1>
-
-
-                <p class="text-md text-gray">
-                    College
-                </p>
-
-            </div>
-
-
-
-            <!--  LOGIN FORM  -->
-
-            <form>
-
-
-                <!-- Username -->
-
-                <div class="mb-6">
-
-                    <label
-                        for="username"
-                        class="d-block text-md font-semibold text-dark mb-3">
-
-                        Login
-
-                    </label>
-
-
-                    <div
-                        class="d-flex items-center border-1 border-light-gray radius-lg overflow-hidden">
-
-                        <div
-                            class="bg-warning p-4">
-
-                            👤
-
-                        </div>
-
-
-                        <input
-                            type="text"
-                            id="username"
-                            name="username"
-                            placeholder="Enter your username"
-                            class="border-0 p-4 w-100 text-md">
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Password -->
-
-                <div class="mb-4">
-
-                    <label
-                        for="password"
-                        class="d-block text-md font-semibold text-dark mb-3">
-
-                        Password
-
-                    </label>
-
-
-                    <div
-                        class="d-flex items-center border-1 border-light-gray radius-lg overflow-hidden">
-
-                        <div
-                            class="bg-warning p-4">
-
-                            🔒
-
-                        </div>
-
-
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="Enter your password"
-                            class="border-0 p-4 w-100 text-md">
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Forgot Password -->
-
-                <div class="d-flex justify-end mb-8">
-
-                    <a
-                        href="#"
-                        class="text-primary text-sm font-semibold">
-
-                        Forgot Password?
-
-                    </a>
-
-                </div>
-
-
-
-                <!-- Login Button -->
-
-                <button
-                    type="submit"
-                    class="bg-primary text-white border-0 radius-lg p-4 w-100 text-lg font-bold">
-
-                    Log In
-
-                </button>
-
-
-            </form>
-
-
-        </section>
-
-
-
-        <!--  DECORATIVE BOTTOM  -->
-
-        <div
-            class="position-absolute bottom-0 left-0 w-100 d-flex justify-center">
-
-            <div
-                class="bg-warning radius-2xl w-75 h-80">
-            </div>
-
+        <div class="mb-6">
+          <label for="password" class="label"><span class="mr-2 fa-solid fa-lock"></span>Password</label>
+          <input class="mt-2 input" type="text" id="password" name="password" placeholder="Enter your password" />
         </div>
 
-
-    </main>
-
-</body>
-
+        <button class="w-100 btn-primary btn-login" type="submit">Log In</button>
+      </form>
+    </div>
+  </body>
 </html>
