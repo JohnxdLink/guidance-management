@@ -3,9 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Guidance | School Year</title>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/dashboard.css" />
   </head>
-  <body>
-    <h1>School Year Page</h1>
+
+  <body class="w-100 bg-light">
+    <header class="px-5 header__h-10 d-flex flex-row items-center justify-between bg-primary">
+      <!-- Logo -->
+      <div class="d-flex flex-row items-center gap-2">
+        <img class="w-80 h-80" src="../../assets/images/logo/britech-logo.png" alt="" />
+        <div class="d-flex flex-column text-white">
+          <h1 class="text-lg">School Year</h1>
+          <p class="text-light-gray">Clinic Management System</p>
+        </div>
+      </div>
+
+      <div class="d-flex flex-row items-center gap-2">
+        <div class="d-flex flex-column text-white gap-1">
+          <h1>Welcome! <span class="font-normal">Juan Dela Cruz</span></h1>
+          <p class="text-light-gray">Super Admin</p>
+        </div>
+
+        <button class="btn-ghost btn-sign-out">
+          <i class="text-lg fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container__h-85 d-flex flex-row">
+      <aside class="pt-5 w-384 h-100 bg-warning border-b border-light-gray">
+        <nav class="p-2 d-flex flex-column gap-2">
+          <a class="btn-primary btn-nav" href="../dashboard.html"><i class="fa-solid fa-shapes"></i>Dashboard</a>
+          <a class="btn-primary btn-nav" href="../students.html"><i class="fa-solid fa-users"></i>Students</a>
+          <a class="btn-primary btn-nav" href="../accounts.html"><i class="fa-solid fa-user-gear"></i>Accounts</a>
+          <a class="btn-primary btn-nav" href="../guidance.html"
+            ><i class="fa-solid fa-hands-holding-circle"></i>Guidance</a
+          >
+          <a class="btn-primary btn-nav" href="../reports.html"><i class="fa-solid fa-file-lines"></i>Reports</a>
+
+          <div class="d-flex flex-column">
+            <a class="btn-primary btn-primary__is-active btn-nav btn-nav__sub-item" id="schoolToggle">
+              <div>
+                <span class="mr-1 fa-solid fa-school"></span>
+                School
+              </div>
+
+              <i id="schoolChevron" class="fa-solid fa-chevron-down"></i>
+            </a>
+
+            <div id="schoolMenu" class="mt-2 d-none flex-column gap-2">
+              <a class="ml-12 btn-primary btn-nav" href="./school-year.html">School Year</a>
+              <a class="ml-12 btn-primary btn-nav" href="./strand.html">Grade & Strand</a>
+              <a class="ml-12 btn-primary btn-nav" href="./section.html">Sections</a>
+            </div>
+          </div>
+        </nav>
+      </aside>
+
+      <main class="w-100"></main>
+    </div>
+    <footer class="px-3 footer__h-5 d-flex flex-row items-center bg-warning">
+      <p class="text-sm text-gray">
+        © 2026 Britech College | Web-Based Guidance Management System | All Rights Reserved.
+      </p>
+    </footer>
   </body>
+
+  <script type="module" src="../../assets/js/main.js"></script>
+  <script type="module" src="../../assets/js/pages/school.js"></script>
 </html>
