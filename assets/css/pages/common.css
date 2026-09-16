@@ -1,0 +1,18 @@
+@import url("../component/buttons/base.css");
+
+.btn-nav {
+  color: var(--color-white);
+  justify-content: start;
+}
+
+.btn-nav__sub-item {
+  justify-content: space-between;
+}
+
+.btn-sign-out {
+  color: var(--color-white);
+}
+
+.btn-sign-out:hover {
+  color: var(--color-dark);
+}
