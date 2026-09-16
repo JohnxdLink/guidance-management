@@ -1,0 +1,19 @@
+@import url("../component/loader/base.css");
+@import url("../component/inputs/base.css");
+@import url("../component/buttons/base.css");
+
+.right-container {
+  background-image:
+    linear-gradient(135deg, rgba(15, 118, 110, 0.9), rgba(15, 118, 109, 0.917)),
+    url("../../images/backgrounds/Guidance\ Office.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.btn-login {
+  padding-top: var(--space-20);
+  padding-bottom: var(--space-20);
+  color: var(--color-white);
+}
