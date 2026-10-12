@@ -64,9 +64,60 @@
         </nav>
       </aside>
 
-<main class="p-8">
-
+      <main class="p-8">
         <!-- PAGE HEADER -->
+
+        <div class="d-flex items-center justify-between mb-6">
+          <div>
+            <h1 class="text-3xl font-bold text-dark">Accounts</h1>
+
+            <p class="text-gray mt-2">Manage user accounts and information.</p>
+          </div>
+
+          <a href="dashboard.html" class="bg-primary text-white px-6 py-3 radius-lg text-decoration-none font-bold">
+            ← Dashboard
+          </a>
+        </div>
+
+<!-- here :) -->  
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accounts | Britech Guidance</title>
+
+    <!-- YOUR EXISTING BASE CSS FILES -->
+    <link rel="stylesheet" href="base/theme.css">
+    <link rel="stylesheet" href="base/reset.css">
+    <link rel="stylesheet" href="base/colors.css">
+    <link rel="stylesheet" href="base/display.css">
+    <link rel="stylesheet" href="base/flex.css">
+    <link rel="stylesheet" href="base/gap.css">
+    <link rel="stylesheet" href="base/height.css">
+    <link rel="stylesheet" href="base/margin.css">
+    <link rel="stylesheet" href="base/opacity.css">
+    <link rel="stylesheet" href="base/overflow.css">
+    <link rel="stylesheet" href="base/padding.css">
+    <link rel="stylesheet" href="base/position.css">
+    <link rel="stylesheet" href="base/radius.css">
+    <link rel="stylesheet" href="base/shadow.css">
+    <link rel="stylesheet" href="base/text.css">
+    <link rel="stylesheet" href="base/width.css">
+    <link rel="stylesheet" href="base/border.css">
+    <link rel="stylesheet" href="base/z-index.css">
+
+</head>
+
+<body class="bg-light">
+
+    <main class="p-8">
+
+        <!-- ==============================
+             PAGE HEADER
+        =============================== -->
 
         <div class="d-flex items-center justify-between mb-6">
 
@@ -94,16 +145,18 @@
         </div>
 
 
-        <!-- MAIN CONTENT -->
+        <!-- ==============================
+             MAIN CONTENT
+        =============================== -->
 
         <section class="d-flex gap-6 items-start">
 
 
-           
 
 
-
-            <!-- CENTER TABLE -->
+            <!-- ==============================
+                 ACCOUNT TABLE
+            =============================== -->
 
             <section class="flex-1">
 
@@ -115,6 +168,7 @@
 
                     <div
                         class="d-flex items-center justify-between mb-6">
+
 
                         <div>
 
@@ -155,7 +209,9 @@
 
 
 
-                    <!-- ACCOUNT TABLE -->
+                    <!-- ==============================
+                         TABLE
+                    =============================== -->
 
                     <div class="overflow-auto">
 
@@ -185,6 +241,10 @@
                                         Email
                                     </th>
 
+                                    <th class="text-left p-4 border-bottom">
+                                        Action
+                                    </th>
+
                                 </tr>
 
                             </thead>
@@ -193,59 +253,27 @@
                             <tbody id="accountTableBody">
 
 
-                                <!-- ACCOUNT 1 -->
+                                <!-- ==========================
+                                     ACCOUNT 1
+                                =========================== -->
 
                                 <tr>
 
-                                    <td class="p-4 border-bottom">
-                                        admin
-                                    </td>
+                                  
 
                                     <td class="p-4 border-bottom">
-                                        01
-                                    </td>
 
-                                    <td class="p-4 border-bottom">
-                                        Administrator Brac
-                                    </td>
+                                        <button
+                                            type="button"
+                                            class="delete-account bg-danger text-white border-0 radius-lg px-4 py-2">
 
-                                    <td class="p-4 border-bottom">
-                                        09123456789
-                                    </td>
+                                            Delete
 
-                                    <td class="p-4 border-bottom">
-                                        admin@britech.edu
+                                        </button>
+
                                     </td>
 
                                 </tr>
-
-
-                                <!-- ACCOUNT 2 -->
-
-                                <tr>
-
-                                    <td class="p-4 border-bottom">
-                                        counselor01
-                                    </td>
-
-                                    <td class="p-4 border-bottom">
-                                        02
-                                    </td>
-
-                                    <td class="p-4 border-bottom">
-                                        Juan Dela Cruz
-                                    </td>
-
-                                    <td class="p-4 border-bottom">
-                                        09987654321
-                                    </td>
-
-                                    <td class="p-4 border-bottom">
-                                        counselor@britech.edu
-                                    </td>
-
-                                </tr>
-
 
                             </tbody>
 
@@ -259,7 +287,9 @@
 
 
 
-            <!-- RIGHT SIDE - ADD ACCOUNT -->
+            <!-- ==============================
+                 ADD ACCOUNT FORM
+            =============================== -->
 
             <aside
                 class="bg-white border-1 border-light-gray radius-lg shadow p-6"
@@ -455,7 +485,7 @@
 
 
 
-                    <!-- ADD ACCOUNT -->
+                    <!-- ADD ACCOUNT BUTTON -->
 
                     <button
                         type="submit"
@@ -473,11 +503,34 @@
 
 
 
-        
+        <!-- ==============================
+             FOOTER
+        =============================== -->
+
+        <footer class="text-center p-8 mt-8">
+
+            <p class="text-sm text-gray">
+                © 2026 Britech College
+            </p>
+
+            <p class="text-sm text-gray mt-2">
+                Web-Based Guidance Management System
+            </p>
+
+        </footer>
 
     </main>
-    </div>
-    <footer class="px-3 footer__h-5 d-flex flex-row items-center bg-warning">
+
+
+    <!-- SEPARATE JAVASCRIPT -->
+
+    <script src="account.js"></script>
+
+</body>
+
+</html>
+
+           <footer class="px-3 footer__h-5 d-flex flex-row items-center bg-warning">
       <p class="text-sm text-gray">
         © 2026 Britech College | Web-Based Guidance Management System | All Rights Reserved.
       </p>
