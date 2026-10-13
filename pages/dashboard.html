@@ -21,13 +21,11 @@
 
       <div class="d-flex flex-row items-center gap-2">
         <div class="d-flex flex-column text-white gap-1">
-          <h1>Welcome! <span class="font-normal">Juan Dela Cruz</span></h1>
+          <h1>Welcome! <span class="font-normal">Admin</span></h1>
           <p class="text-light-gray">Super Admin</p>
         </div>
 
-        <button class="btn-ghost btn-sign-out">
-          <i class="text-lg fa-solid fa-arrow-right-from-bracket"></i>
-        </button>
+        <a href="../index.html" class="btn-ghost btn-sign-out text-lg fa-solid fa-arrow-right-from-bracket"></a>
       </div>
     </header>
 
@@ -99,36 +97,57 @@
              DASHBOARD CARDS
         ========================================== -->
 
-        <section class="d-flex flex-wrap gap-6 mt-6">
-          <!-- RECORD OF REPORTS -->
+        <!-- MAIN CONTENT -->
 
-          <a href="#" class="bg-white radius-2xl shadow p-8 flex-1 text-decoration-none">
-            <div class="d-flex items-center justify-center border-2 border-primary radius-lg w-60 h-60 mb-6">✉️</div>
+        <section class="d-flex gap-8 items-start">
+          <!-- LEFT SIDE -->
 
-            <h2 class="text-xl font-bold text-dark mb-3">Record of Reports</h2>
+          <div class="flex-1">
+            <!-- SUMMARY CARDS -->
 
-            <p class="text-gray">View and manage submitted guidance reports.</p>
-          </a>
+            <div class="d-flex gap-4 mt-8 mb-8">
+              <!-- TOTAL STUDENTS -->
 
-          <!-- SCHEDULE -->
+              <div class="bg-white border-1 border-light-gray p-5 radius-lg flex-1 shadow">
+                <p class="text-sm text-gray">RECORD OF REPORTS</p>
 
-          <a href="#" class="bg-white radius-2xl shadow p-8 flex-1 text-decoration-none">
-            <div class="d-flex items-center justify-center border-2 border-primary radius-lg w-60 h-60 mb-6">🕒</div>
+                <h2 id="totalStudents" class="text-2xl font-bold text-primary mt-2">0</h2>
+              </div>
 
-            <h2 class="text-xl font-bold text-dark mb-3">Schedule</h2>
+              <!-- WITH ACCOUNTS -->
 
-            <p class="text-gray">Check and manage guidance schedules.</p>
-          </a>
+              <div class="bg-white border-1 border-light-gray p-5 radius-lg flex-1 shadow">
+                <p class="text-sm text-gray">SCHEDULE</p>
 
-          <!-- LIST OF STUDENTS -->
+                <h2 class="text-2xl font-bold text-primary mt-2">0</h2>
+              </div>
 
-          <a href="#" class="bg-white radius-2xl shadow p-8 flex-1 text-decoration-none">
-            <div class="d-flex items-center justify-center border-2 border-primary radius-lg w-60 h-60 mb-6">👤</div>
+              <!-- WITHOUT ACCOUNTS -->
 
-            <h2 class="text-xl font-bold text-dark mb-3">List of Students</h2>
+              <div class="bg-white border-1 border-light-gray p-5 radius-lg flex-1 shadow">
+                <p class="text-sm text-gray">LIST OF STUDENTS</p>
 
-            <p class="text-gray">View student information and records.</p>
-          </a>
+                <h2 class="text-2xl font-bold text-primary mt-2">0</h2>
+              </div>
+
+              <!-- MAJORITY STRAND -->
+            </div>
+
+            <!-- STUDENT TABLE -->
+            <div class="bg-white border-1 border-light-gray radius-lg shadow overflow-hidden">
+              <div class="p-6">
+                <!-- TABLE HEADER -->
+
+                <div class="d-flex items-center justify-between mb-6">
+                  <div>
+                    <h2 class="text-xl font-bold text-dark">Student List</h2>
+
+                    <p class="text-sm text-gray mt-2">Registered students</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section class="d-flex items-center justify-between bg-white radius-2xl shadow p-6 mt-6">
@@ -144,6 +163,7 @@
         </section>
       </main>
     </div>
+
     <footer class="px-3 footer__h-5 d-flex flex-row items-center bg-warning">
       <p class="text-sm text-gray">
         © 2026 Britech College | Web-Based Guidance Management System | All Rights Reserved.
