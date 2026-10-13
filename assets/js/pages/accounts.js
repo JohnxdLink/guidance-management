@@ -91,7 +91,7 @@ accountForm.addEventListener("submit", function (event) {
 
                 <button
                     type="button"
-                    class="delete-account bg-danger text-white border-0 radius-lg px-4 py-2">
+                    class="delete-account btn-primary">
 
                     Delete
 
