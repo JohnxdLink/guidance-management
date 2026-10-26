@@ -1,0 +1,3 @@
+const concerns = () => {};
+
+concerns();
