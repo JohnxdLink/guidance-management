@@ -8,17 +8,17 @@ const {
   FIND_ROLE_BY_NAME,
   UPDATE_ROLE,
   DELETE_ROLE,
-} = require("../queries/role-query.js");
+} = require("../database/queries/role-query.js");
 
 // ==========================================
 // CREATE OPERATION
 // ==========================================
 const createRole = async (data) => {
-  if (!data.name || !data.description) {
+  if (!name || !description) {
     throw new Error("Required fields are missing.");
   }
 
-  const [result] = await db.query(CREATE_ROLE, [data.name, data.description]);
+  const [result] = await db.query(CREATE_ROLE, [name, description]);
 
   return result;
 };
@@ -63,7 +63,7 @@ const updateRole = async (id, data) => {
     throw new Error("Role ID is required.");
   }
 
-  const [result] = await db.query(UPDATE_ROLE, [data.name, data.description, id]);
+  const [result] = await db.query(UPDATE_ROLE, [name, description, id]);
 
   return result;
 };

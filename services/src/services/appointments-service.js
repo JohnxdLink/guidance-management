@@ -16,19 +16,19 @@ const {
 // ==========================================
 const createAppointment = async (data) => {
   // Input Validation
-  if (!data.student_id || !data.staff_id || !data.appointment_date || !data.appointment_time || !data.purpose) {
+  if (!student_id || !staff_id || !appointment_date || !appointment_time || !purpose) {
     throw new Error("Required fields are missing.");
   }
 
   // Execute SQL query with parameter binding
   const [result] = await db.query(CREATE_APPOINTMENT, [
-    data.student_id,
-    data.staff_id,
-    data.appointment_date,
-    data.appointment_time,
-    data.purpose,
-    data.status,
-    data.remarks,
+    student_id,
+    staff_id,
+    appointment_date,
+    appointment_time,
+    purpose,
+    status,
+    remarks,
   ]);
 
   return result;
@@ -97,13 +97,13 @@ const updateAppointment = async (id, data) => {
   }
 
   const [result] = await db.query(UPDATE_APPOINTMENT, [
-    data.student_id,
-    data.staff_id,
-    data.appointment_date,
-    data.appointment_time,
-    data.purpose,
-    data.status,
-    data.remarks,
+    student_id,
+    staff_id,
+    appointment_date,
+    appointment_time,
+    purpose,
+    status,
+    remarks,
     id,
   ]);
 

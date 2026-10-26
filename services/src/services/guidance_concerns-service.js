@@ -9,19 +9,19 @@ const {
   FIND_INACTIVE_GUIDANCE_CONCERNS,
   UPDATE_GUIDANCE_CONCERN,
   DELETE_GUIDANCE_CONCERN,
-} = require("../database/queries/guidance-concerns-query.js");
+} = require("../database/queries/guidance_concerns-query.js");
 
 // ==========================================
 // CREATE OPERATION
 // ==========================================
 const createGuidanceConcern = async (data) => {
   // Input Validation
-  if (!data.name) {
+  if (!name) {
     throw new Error("Concern name is required.");
   }
 
   // Execute SQL query with parameter binding
-  const [result] = await db.query(CREATE_GUIDANCE_CONCERN, [data.name, data.description, data.is_active]);
+  const [result] = await db.query(CREATE_GUIDANCE_CONCERN, [name, description, is_active]);
 
   return result;
 };
@@ -78,7 +78,7 @@ const updateGuidanceConcern = async (id, data) => {
     throw new Error("Concern ID is required.");
   }
 
-  const [result] = await db.query(UPDATE_GUIDANCE_CONCERN, [data.name, data.description, data.is_active, id]);
+  const [result] = await db.query(UPDATE_GUIDANCE_CONCERN, [name, description, is_active, id]);
 
   return result;
 };

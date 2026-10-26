@@ -9,25 +9,19 @@ const {
   FIND_GUIDANCE_REPORTS_BY_DATE_RANGE,
   UPDATE_GUIDANCE_REPORT,
   DELETE_GUIDANCE_REPORT,
-} = require("../database/queries/guidance-reports-query.js");
+} = require("../database/queries/guidance_report-query.js");
 
 // ==========================================
 // CREATE OPERATION
 // ==========================================
 const createGuidanceReport = async (data) => {
   // Input Validation
-  if (!data.staff_id || !data.report_type || !data.report_title || !data.date_from || !data.date_to) {
+  if (!staff_id || !report_type || !report_title || !date_from || !date_to) {
     throw new Error("Required fields are missing.");
   }
 
   // Execute SQL query with parameter binding
-  const [result] = await db.query(CREATE_GUIDANCE_REPORT, [
-    data.staff_id,
-    data.report_type,
-    data.report_title,
-    data.date_from,
-    data.date_to,
-  ]);
+  const [result] = await db.query(CREATE_GUIDANCE_REPORT, [staff_id, report_type, report_title, date_from, date_to]);
 
   return result;
 };
@@ -94,11 +88,11 @@ const updateGuidanceReport = async (id, data) => {
   }
 
   const [result] = await db.query(UPDATE_GUIDANCE_REPORT, [
-    data.staff_id,
-    data.report_type,
-    data.report_title,
-    data.date_from,
-    data.date_to,
+    staff_id,
+    report_type,
+    report_title,
+    date_from,
+    date_to,
     id,
   ]);
 

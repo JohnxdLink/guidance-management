@@ -11,28 +11,22 @@ const {
   FIND_GRADE_SECTION,
   UPDATE_GRADE_SECTION,
   DELETE_GRADE_SECTION,
-} = require("../queries/grade_sections-query.js");
+} = require("../database/queries/grade_sections-query.js");
 
 // ==========================================
 // CREATE OPERATION
 // ==========================================
 const createGradeSection = async (data) => {
-  if (
-    !data.school_year_id ||
-    !data.grade_n_strand_id ||
-    !data.adviser_staff_id ||
-    !data.section_name ||
-    !data.description
-  ) {
+  if (!school_year_id || !grade_n_strand_id || !adviser_staff_id || !section_name || !description) {
     throw new Error("Required fields are missing.");
   }
 
   const [result] = await db.query(CREATE_GRADE_SECTION, [
-    data.school_year_id,
-    data.grade_n_strand_id,
-    data.adviser_staff_id,
-    data.section_name,
-    data.description,
+    school_year_id,
+    grade_n_strand_id,
+    adviser_staff_id,
+    section_name,
+    description,
   ]);
 
   return result;
@@ -112,11 +106,11 @@ const updateGradeSection = async (id, data) => {
   }
 
   const [result] = await db.query(UPDATE_GRADE_SECTION, [
-    data.school_year_id,
-    data.grade_n_strand_id,
-    data.adviser_staff_id,
-    data.section_name,
-    data.description,
+    school_year_id,
+    grade_n_strand_id,
+    adviser_staff_id,
+    section_name,
+    description,
     id,
   ]);
 

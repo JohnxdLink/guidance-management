@@ -12,29 +12,29 @@ const {
   FIND_CASE_RECORD,
   UPDATE_CASE_RECORD,
   DELETE_CASE_RECORD,
-} = require("../database/queries/case-records-query.js");
+} = require("../database/queries/case_records-query.js");
 
 // ==========================================
 // CREATE OPERATION
 // ==========================================
 const createCaseRecord = async (data) => {
   // Input Validation
-  if (!data.student_id || !data.concern_id || !data.opened_by || !data.opened_date || !data.title) {
+  if (!student_id || !concern_id || !opened_by || !opened_date || !title) {
     throw new Error("Required fields are missing.");
   }
 
   // Execute SQL query with parameter binding
   const [result] = await db.query(CREATE_CASE_RECORD, [
-    data.student_id,
-    data.concern_id,
-    data.opened_by,
-    data.opened_date,
-    data.title,
-    data.description,
-    data.priority,
-    data.status,
-    data.closed_date,
-    data.closing_remarks,
+    student_id,
+    concern_id,
+    opened_by,
+    opened_date,
+    title,
+    description,
+    priority,
+    status,
+    closed_date,
+    closing_remarks,
   ]);
 
   return result;
@@ -136,16 +136,16 @@ const updateCaseRecord = async (id, data) => {
   }
 
   const [result] = await db.query(UPDATE_CASE_RECORD, [
-    data.student_id,
-    data.concern_id,
-    data.opened_by,
-    data.opened_date,
-    data.title,
-    data.description,
-    data.priority,
-    data.status,
-    data.closed_date,
-    data.closing_remarks,
+    student_id,
+    concern_id,
+    opened_by,
+    opened_date,
+    title,
+    description,
+    priority,
+    status,
+    closed_date,
+    closing_remarks,
     id,
   ]);
 

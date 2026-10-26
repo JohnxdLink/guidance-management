@@ -10,30 +10,30 @@ const {
   FIND_GUIDANCE_SESSIONS_BY_TYPE,
   UPDATE_GUIDANCE_SESSION,
   DELETE_GUIDANCE_SESSION,
-} = require("../database/queries/guidance-sessions-query.js");
+} = require("../database/queries/guidance_sessions-query.js");
 
 // ==========================================
 // CREATE OPERATION
 // ==========================================
 const createGuidanceSession = async (data) => {
   // Input Validation
-  if (!data.case_record_id || !data.staff_id || !data.session_date || !data.session_time || !data.session_type) {
+  if (!case_record_id || !staff_id || !session_date || !session_time || !session_type) {
     throw new Error("Required fields are missing.");
   }
 
   // Execute SQL query with parameter binding
   const [result] = await db.query(CREATE_GUIDANCE_SESSION, [
-    data.case_record_id,
-    data.staff_id,
-    data.session_date,
-    data.session_time,
-    data.session_type,
-    data.concern,
-    data.discussion_summary,
-    data.intervention,
-    data.recommendation,
-    data.follow_up_date,
-    data.status,
+    case_record_id,
+    staff_id,
+    session_date,
+    session_time,
+    session_type,
+    concern,
+    discussion_summary,
+    intervention,
+    recommendation,
+    follow_up_date,
+    status,
   ]);
 
   return result;
@@ -113,17 +113,17 @@ const updateGuidanceSession = async (id, data) => {
   }
 
   const [result] = await db.query(UPDATE_GUIDANCE_SESSION, [
-    data.case_record_id,
-    data.staff_id,
-    data.session_date,
-    data.session_time,
-    data.session_type,
-    data.concern,
-    data.discussion_summary,
-    data.intervention,
-    data.recommendation,
-    data.follow_up_date,
-    data.status,
+    case_record_id,
+    staff_id,
+    session_date,
+    session_time,
+    session_type,
+    concern,
+    discussion_summary,
+    intervention,
+    recommendation,
+    follow_up_date,
+    status,
     id,
   ]);
 

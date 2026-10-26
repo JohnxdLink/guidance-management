@@ -5,5 +5,5 @@
 INSERT INTO accounts (username, password)
 VALUES (
     'admin',
-    '$2a$12$PKJX.e1vxhtIhIla2gqPtOqZwvGPfe8C/PawKqDLYL.SvhfZd7GP6'
+    '$2a$12$3Bc6V/5lUiW3ulbfanmgFeMabxiFN5Bdo4Twe9RllwfjKQ0EHN2YC'
 );

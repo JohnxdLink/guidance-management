@@ -8,17 +8,17 @@ const {
   FIND_GRADE_N_STRAND,
   UPDATE_GRADE_N_STRAND,
   DELETE_GRADE_N_STRAND,
-} = require("../queries/grade_n_strands-query.js");
+} = require("../database/queries/grade_n_strands-query.js");
 
 // ==========================================
 // CREATE OPERATION
 // ==========================================
 const createGradeNStrand = async (data) => {
-  if (!data.grade_level || !data.strand || !data.description) {
+  if (!grade_level || !strand || !description) {
     throw new Error("Required fields are missing.");
   }
 
-  const [result] = await db.query(CREATE_GRADE_N_STRAND, [data.grade_level, data.strand, data.description]);
+  const [result] = await db.query(CREATE_GRADE_N_STRAND, [grade_level, strand, description]);
 
   return result;
 };
@@ -63,7 +63,7 @@ const updateGradeNStrand = async (id, data) => {
     throw new Error("Grade and strand ID is required.");
   }
 
-  const [result] = await db.query(UPDATE_GRADE_N_STRAND, [data.grade_level, data.strand, data.description, id]);
+  const [result] = await db.query(UPDATE_GRADE_N_STRAND, [grade_level, strand, description, id]);
 
   return result;
 };

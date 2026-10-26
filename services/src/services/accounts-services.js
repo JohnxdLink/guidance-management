@@ -8,19 +8,19 @@ const {
   FIND_ACCOUNT_BY_USERNAME,
   UPDATE_ACCOUNT,
   DELETE_ACCOUNT,
-} = require("../queries/accounts-query.js");
+} = require("../database/queries/accounts-query.js");
 
 // ==========================================
 // CREATE OPERATION
 // ==========================================
 const createAccount = async (data) => {
   // Input Validation
-  if (!data.username || !data.password) {
+  if (!username || !password) {
     throw new Error("Username and password are required.");
   }
 
   // Execute SQL query
-  const [result] = await db.query(CREATE_ACCOUNT, [data.username, data.password]);
+  const [result] = await db.query(CREATE_ACCOUNT, [username, password]);
 
   return result;
 };
@@ -65,7 +65,7 @@ const updateAccount = async (id, data) => {
     throw new Error("Account ID is required.");
   }
 
-  const [result] = await db.query(UPDATE_ACCOUNT, [data.username, data.password, id]);
+  const [result] = await db.query(UPDATE_ACCOUNT, [username, password, id]);
 
   return result;
 };

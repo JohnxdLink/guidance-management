@@ -9,23 +9,17 @@ const {
   FIND_ACTIVE_SCHOOL_YEAR,
   UPDATE_SCHOOL_YEAR,
   DELETE_SCHOOL_YEAR,
-} = require("../queries/school-query.js");
+} = require("../database/queries/school_years-query.js");
 
 // ==========================================
 // CREATE OPERATION
 // ==========================================
 const createSchoolYear = async (data) => {
-  if (!data.staff_id || !data.school_year || !data.start_date || !data.end_date) {
+  if (!staff_id || !school_year || !start_date || !end_date) {
     throw new Error("Required fields are missing.");
   }
 
-  const [result] = await db.query(CREATE_SCHOOL_YEAR, [
-    data.staff_id,
-    data.school_year,
-    data.start_date,
-    data.end_date,
-    data.is_active,
-  ]);
+  const [result] = await db.query(CREATE_SCHOOL_YEAR, [staff_id, school_year, start_date, end_date, is_active]);
 
   return result;
 };
@@ -77,14 +71,7 @@ const updateSchoolYear = async (id, data) => {
     throw new Error("School year ID is required.");
   }
 
-  const [result] = await db.query(UPDATE_SCHOOL_YEAR, [
-    data.staff_id,
-    data.school_year,
-    data.start_date,
-    data.end_date,
-    data.is_active,
-    id,
-  ]);
+  const [result] = await db.query(UPDATE_SCHOOL_YEAR, [staff_id, school_year, start_date, end_date, is_active, id]);
 
   return result;
 };

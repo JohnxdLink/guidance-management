@@ -9,26 +9,19 @@ const {
   FIND_STAFF_BY_EMAIL,
   UPDATE_STAFF,
   DELETE_STAFF,
-} = require("../queries/staff-query.js");
+} = require("../database/queries/staff-query.js");
 
 // ==========================================
 // CREATE OPERATION
 // ==========================================
 const createStaff = async (data) => {
   // Input Validation
-  if (!data.account_id || !data.role_id || !data.lastname || !data.firstname || !data.contact_no || !data.email) {
+  if (!account_id || !role_id || !lastname || !firstname || !contact_no || !email) {
     throw new Error("Required fields are missing.");
   }
 
   // Execute SQL query
-  const [result] = await db.query(CREATE_STAFF, [
-    data.account_id,
-    data.role_id,
-    data.lastname,
-    data.firstname,
-    data.contact_no,
-    data.email,
-  ]);
+  const [result] = await db.query(CREATE_STAFF, [account_id, role_id, lastname, firstname, contact_no, email]);
 
   return result;
 };
@@ -84,15 +77,7 @@ const updateStaff = async (id, data) => {
     throw new Error("Staff ID is required.");
   }
 
-  const [result] = await db.query(UPDATE_STAFF, [
-    data.account_id,
-    data.role_id,
-    data.lastname,
-    data.firstname,
-    data.contact_no,
-    data.email,
-    id,
-  ]);
+  const [result] = await db.query(UPDATE_STAFF, [account_id, role_id, lastname, firstname, contact_no, email, id]);
 
   return result;
 };
